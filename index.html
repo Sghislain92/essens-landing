@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="fr" class="bg-deep">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ess'Sens · Liqueur artisanale</title>
+<meta name="description" content="Ess'Sens : liqueur artisanale fruits rouges et épices, et cocktails au sodabi. Commande par WhatsApp au Bénin.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500;1,9..144,700&family=Caveat+Brush&family=Baloo+2:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-deep font-sans text-base leading-relaxed text-cream antialiased">
+
+<svg width="0" height="0" class="absolute" aria-hidden="true">
+  <symbol id="logo" viewBox="0 0 100 124">
+    <path fill="#f6a04a" d="M50 0C53 14 58 22 64 30C76 45 90 58 93 80C87 70 81 64 76 60L24 60C19 64 13 70 7 80C10 58 24 45 36 30C42 22 47 14 50 0Z"/>
+    <path fill="#0f4d3a" d="M50 18C50 18 15 62 15 86A35 35 0 0 0 85 86C85 62 50 18 50 18Z"/>
+    <path fill="#f6a04a" d="M50 52C50 52 31 78 31 91A19 19 0 0 0 69 91C69 78 50 52 50 52Z"/>
+    <circle cx="50" cy="40" r="4.5" fill="#fbefe3"/>
+  </symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.4 3.9c1.6.7 2.3.8 3.1.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .2-1.2c-.1-.1-.2-.2-.4-.3Z"/></symbol>
+</svg>
+
+<!-- Contrôle d'âge -->
+<div id="gate" class="fixed inset-0 z-50 grid place-items-center bg-[#0e0204]/90 p-5 backdrop-blur-md" role="dialog" aria-modal="true" aria-labelledby="gt">
+  <div class="max-w-[420px] rounded-3xl border border-line bg-bord px-6 py-9 text-center">
+    <svg class="mx-auto mb-4 h-[70px] w-14"><use href="#logo"/></svg>
+    <h2 id="gt" class="font-display text-3xl font-bold leading-tight">Avez-vous 18 ans ou plus ?</h2>
+    <p class="mb-6 mt-3 text-soft">Ce site présente des boissons alcoolisées. Leur vente est interdite aux mineurs.</p>
+    <div class="flex flex-wrap justify-center gap-2.5"><button class="btn btn-gold" id="yes" type="button">Oui, entrer</button><button class="btn btn-ghost" id="no" type="button">Non</button></div>
+  </div>
+</div>
+
+<!-- Navigation -->
+<nav id="nav" class="fixed inset-x-0 top-0 z-20 flex items-center justify-between gap-4 px-[max(4vw,16px)] py-3.5 transition-colors">
+  <a class="flex items-center gap-2.5 no-underline" href="#top" aria-label="Ess'Sens, accueil"><svg class="h-[38px] w-[30px]" aria-hidden="true"><use href="#logo"/></svg><span class="font-logo text-[22px] leading-none tracking-wider text-cream">ESS'SENS</span></a>
+  <div class="hidden gap-6 text-[15px] lg:flex">
+    <a class="text-soft no-underline hover:text-cream" href="#story">La liqueur</a>
+    <a class="text-soft no-underline hover:text-cream" href="#service">Le service</a>
+    <a class="text-soft no-underline hover:text-cream" href="#cocktails">Cocktails</a>
+    <a class="text-soft no-underline hover:text-cream" href="#rituel">Dégustation</a>
+    <a class="text-soft no-underline hover:text-cream" href="#commander">Commander</a>
+  </div>
+  <a class="btn btn-gold max-sm:px-3.5" href="#commander"><svg aria-hidden="true"><use href="#wa"/></svg><span class="max-sm:hidden">Commander</span></a>
+</nav>
+
+<!-- ===== Scène 1 : la liqueur ===== -->
+<section id="story" class="relative h-[440vh]" aria-label="La liqueur Ess'Sens">
+  <a id="top"></a>
+  <div class="stage-bg fade-bottom sticky top-0 h-screen overflow-hidden" style="height:100svh">
+    <div class="bokeh absolute -inset-[5%] opacity-40"></div><div class="bokeh b2 absolute -inset-[5%] opacity-0"></div><div class="tint absolute inset-0 opacity-0"></div>
+    <div class="giant pointer-events-none absolute left-1/2 top-1/2 whitespace-nowrap font-display text-[clamp(120px,24vw,360px)] font-bold leading-none" aria-hidden="true">ESS'SENS</div>
+    <div class="glow absolute left-1/2 top-[56%] aspect-square w-[min(60vh,560px)] rounded-full blur-[10px]"></div>
+
+    <div class="fl blur-layer pointer-events-none absolute left-[18%] top-[16%] w-[90px]" data-k="b1"><img class="w-full" src="assets/img/black2.webp" alt=""></div>
+    <div class="fl blur-layer pointer-events-none absolute left-[78%] top-[12%] w-[70px]" data-k="b2"><img class="w-full" src="assets/img/blue.webp" alt=""></div>
+
+    <div id="bottle" class="bottle absolute left-1/2 top-1/2 h-[min(86vh,820px)] will-change-transform"><img class="h-full w-full object-contain" src="assets/img/bottle.webp" alt="Bouteille de liqueur artisanale Ess'Sens fruits rouges et épices, 500 ml" fetchpriority="high"></div>
+
+    <div class="fl pointer-events-none absolute left-[60%] top-[20%] w-[200px]" data-k="f1"><img class="w-full" src="assets/img/half.webp" alt=""></div>
+    <div class="fl pointer-events-none absolute left-[28%] top-[62%] w-[150px]" data-k="f2"><img class="w-full" src="assets/img/rasp.webp" alt=""></div>
+    <div class="fl pointer-events-none absolute left-[66%] top-[66%] w-[130px]" data-k="f3"><img class="w-full" src="assets/img/rasp2.webp" alt=""></div>
+    <div class="fl pointer-events-none absolute left-[34%] top-[22%] w-[120px]" data-k="f4"><img class="w-full" src="assets/img/black.webp" alt=""></div>
+    <div class="fl pointer-events-none absolute left-[22%] top-[30%] w-[230px]" data-k="s1"><img class="w-full" src="assets/img/anise.webp" alt=""></div>
+    <div class="fl blur-layer pointer-events-none absolute left-[70%] top-[58%] w-[150px]" data-k="s2"><img class="w-full" src="assets/img/anise.webp" alt=""></div>
+
+    <div id="cluster" class="cluster absolute bottom-[-7vh] left-[64%] w-[min(66vw,820px)] will-change-transform"><img class="w-full" src="assets/img/cluster.webp" alt=""></div>
+    <div class="absolute inset-x-0 bottom-0 h-[22vh] bg-gradient-to-b from-transparent to-deep/85"></div>
+
+    <div class="chap absolute left-[max(5vw,18px)] top-1/2 w-[min(460px,40vw)]" data-c="0">
+      <div class="kicker">Liqueur · Bénin</div>
+      <h1 class="font-display text-[clamp(44px,6.2vw,84px)] font-bold leading-[1.05] tracking-tight">Liqueur <span class="brush mt-1 block text-[1.05em] leading-[.9]">artisanale</span></h1>
+      <p class="mt-4 max-w-[38ch] text-[17px] text-soft max-sm:text-[15px]">Fruits rouges et épices, assemblés à la main. Une liqueur à servir bien fraîche ou en cocktail.</p>
+      <div class="mt-6 flex flex-wrap gap-3"><a class="btn btn-gold" href="#commander"><svg aria-hidden="true"><use href="#wa"/></svg>Commander</a><a class="btn btn-ghost" href="#service">Voir le service</a></div>
+    </div>
+    <div class="chap absolute right-[max(5vw,18px)] top-1/2 w-[min(460px,40vw)]" data-c="1">
+      <div class="kicker">01 · Le fruit</div>
+      <h2 class="font-display text-[clamp(34px,4.6vw,60px)] font-bold leading-[1.05]">Des fruits rouges savoureux.</h2>
+      <p class="mt-4 max-w-[38ch] text-[17px] text-soft max-sm:text-[15px]">Fraises, framboises, mûres, myrtilles : toute la gourmandise des fruits rouges, pour une robe d'un rouge profond.</p>
+    </div>
+    <div class="chap absolute left-[max(5vw,18px)] top-1/2 w-[min(460px,40vw)]" data-c="2">
+      <div class="kicker">02 · L'épice</div>
+      <h2 class="font-display text-[clamp(34px,4.6vw,60px)] font-bold leading-[1.05]">Une touche d'épices raffinées.</h2>
+      <p class="mt-4 max-w-[38ch] text-[17px] text-soft max-sm:text-[15px]">Anis étoilé, cannelle et vanille bourbon réchauffent le fruit, sans jamais l'écraser.</p>
+    </div>
+    <div class="chap absolute left-[max(5vw,18px)] top-1/2 w-[min(460px,40vw)]" data-c="3">
+      <div class="kicker">03 · La recette</div>
+      <h2 class="font-display text-[clamp(34px,4.6vw,60px)] font-bold leading-[1.05]">Cinq ingrédients. Rien d'autre.</h2>
+      <ul class="mt-5 flex flex-wrap gap-2"><li class="chip">Alcool neutre</li><li class="chip">Fruits rouges</li><li class="chip">Épices</li><li class="chip">Vanille bourbon</li><li class="chip">Sucre</li></ul>
+      <div class="mt-5 flex gap-6 text-sm text-soft"><div><b class="block font-display text-[28px] text-cream max-sm:text-[22px]">500 ml</b>16,8 oz</div><div><b class="block font-display text-[28px] text-cream max-sm:text-[22px]">Frais</b>ou en cocktail</div></div>
+    </div>
+
+    <div class="dots absolute right-[max(3vw,14px)] top-1/2 flex -translate-y-1/2 flex-col gap-2.5 max-sm:hidden" aria-hidden="true"><i class="on block h-1.5 w-1.5 rounded-full bg-gold/30"></i><i class="block h-1.5 w-1.5 rounded-full bg-gold/30"></i><i class="block h-1.5 w-1.5 rounded-full bg-gold/30"></i><i class="block h-1.5 w-1.5 rounded-full bg-gold/30"></i></div>
+    <div id="cue" class="absolute bottom-[22px] left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 text-[13px] text-soft max-sm:hidden">Faites défiler<i class="block h-9 w-px animate-cue bg-gradient-to-b from-gold to-transparent"></i></div>
+  </div>
+</section>
+
+<!-- ===== Scène 2 : le service ===== -->
+<section id="service" class="relative h-[640vh]" aria-label="Servir la liqueur">
+  <div class="fade-bottom sticky top-0 h-screen overflow-hidden bg-[#1a0508]" style="height:100svh">
+    <canvas id="pour" class="absolute inset-0 block h-full w-full" role="img" aria-label="La bouteille Ess'Sens est débouchée puis versée dans un verre avec des glaçons"></canvas>
+    <div class="pc absolute left-[max(5vw,18px)] top-1/2 w-[min(400px,34vw)]" data-from="0" data-to=".19"><div class="kicker">Le service</div><h2 class="font-display text-[clamp(36px,4.8vw,64px)] font-bold leading-[1.05]">Un verre, trois glaçons.</h2><p class="mt-3.5 max-w-[34ch] text-[17px] text-soft max-sm:text-[15px]">La liqueur Ess'Sens se déguste bien fraîche. Faites défiler pour la servir.</p></div>
+    <div class="pc absolute left-[max(5vw,18px)] top-1/2 w-[min(400px,34vw)]" data-from=".19" data-to=".4"><div class="kicker">Étape 1</div><h2 class="font-display text-[clamp(36px,4.8vw,64px)] font-bold leading-[1.05]">Dévissez.</h2><p class="mt-3.5 max-w-[34ch] text-[17px] text-soft max-sm:text-[15px]">Un quart de tour, et les arômes de fruits rouges s'échappent.</p></div>
+    <div class="pc absolute left-[max(5vw,18px)] top-1/2 w-[min(400px,34vw)]" data-from=".4" data-to=".87"><div class="kicker">Étape 2</div><h2 class="font-display text-[clamp(36px,4.8vw,64px)] font-bold leading-[1.05]">Versez doucement.</h2><p class="mt-3.5 max-w-[34ch] text-[17px] text-soft max-sm:text-[15px]">Directement sur la glace, sans précipitation.</p></div>
+    <div class="pc absolute left-[max(5vw,18px)] top-1/2 w-[min(400px,34vw)]" data-from=".87" data-to="1.01"><div class="kicker">Étape 3</div><h2 class="font-display text-[clamp(36px,4.8vw,64px)] font-bold leading-[1.05]">Savourez.</h2><p class="mt-3.5 max-w-[34ch] text-[17px] text-soft max-sm:text-[15px]">Avec modération, et en bonne compagnie.</p><a class="btn btn-gold mt-5" href="#commander"><svg aria-hidden="true"><use href="#wa"/></svg>Commander</a></div>
+    <div class="absolute bottom-[26px] right-[max(4vw,16px)] flex items-baseline gap-2 rounded-full border border-line bg-black/30 px-[18px] py-2.5 text-[13px] text-soft backdrop-blur max-sm:bottom-auto max-sm:top-[76px]" aria-hidden="true"><b id="dose" class="min-w-[2ch] text-right font-display text-[22px] tabular-nums text-cream">0</b>cl servis</div>
+  </div>
+</section>
+
+<!-- Bandeau -->
+<div class="marquee overflow-hidden border-y border-line bg-bord py-[18px]" aria-hidden="true">
+  <div class="flex w-max animate-marquee gap-12 whitespace-nowrap font-display text-[clamp(26px,3.4vw,40px)] font-medium italic text-gold">
+    <span>Fruits rouges</span><span>Anis étoilé</span><span>Vanille bourbon</span><span>Sodabi</span><span>Citronnelle</span><span>Poivre de Selim</span>
+    <span>Fruits rouges</span><span>Anis étoilé</span><span>Vanille bourbon</span><span>Sodabi</span><span>Citronnelle</span><span>Poivre de Selim</span>
+  </div>
+</div>
+
+<!-- ===== Cocktails ===== -->
+<section id="cocktails" class="relative bg-gradient-to-b from-deep to-[#1f060b] px-[max(5vw,18px)] py-[clamp(64px,8vw,120px)]">
+  <div class="head mx-auto mb-9 flex max-w-[1240px] flex-wrap items-end justify-between gap-6">
+    <h2 class="max-w-[14ch] font-display text-[clamp(38px,5vw,64px)] font-bold leading-[1.05]">La carte des <span class="brush">cocktails</span></h2>
+    <p class="m-0 max-w-[44ch] text-[17px] text-soft">Trois recettes autour du sodabi, l'eau-de-vie de palme du Bénin. Chaque cocktail existe avec ou sans alcool, en bouteille d'un litre.</p>
+  </div>
+  <div class="hwrap relative" id="hwrap"><div class="sticky-x"><div class="track mx-auto grid max-w-[1240px] grid-cols-1 gap-[22px] lg:grid-cols-3" id="track">
+    <article class="ck c1 relative isolate flex min-h-[460px] flex-col justify-end overflow-hidden rounded-[26px] border border-white/10 p-[30px] lg:min-h-[520px]"><div class="bg absolute inset-0 -z-[2] bg-cover bg-center"></div><span class="absolute left-[30px] top-6 font-display text-lg italic text-gold">N° 1</span>
+      <h3 class="font-display text-[clamp(32px,3vw,42px)] font-bold leading-[1.05]">Limonade épicée</h3>
+      <ul class="mt-4 grid gap-[7px]"><li class="flex items-center gap-2.5 font-semibold text-gold before:h-1.5 before:w-1.5 before:flex-none before:rounded-full before:bg-gold before:content-['']">Sodabi</li><li class="flex items-center gap-2.5 before:h-1.5 before:w-1.5 before:flex-none before:rounded-full before:bg-gold before:content-['']">Sirop aux épices</li><li class="flex items-center gap-2.5 before:h-1.5 before:w-1.5 before:flex-none before:rounded-full before:bg-gold before:content-['']">Jus de citron</li><li class="flex items-center gap-2.5 before:h-1.5 before:w-1.5 before:flex-none before:rounded-full before:bg-gold before:content-['']">Infusion de citronnelle</li></ul>
+      <div class="mt-[22px] flex flex-wrap gap-2.5"><span class="whitespace-nowrap rounded-full border border-white/20 bg-black/25 px-3 py-1.5 text-[13px]">1 L avec alcool · 10 000 FCFA</span><span class="whitespace-nowrap rounded-full border border-white/20 bg-black/25 px-3 py-1.5 text-[13px]">1 L sans alcool · 8 000 FCFA</span></div>
+    </article>
+    <article class="ck c2 relative isolate flex min-h-[460px] flex-col justify-end overflow-hidden rounded-[26px] border border-white/10 p-[30px] lg:min-h-[520px]"><div class="bg absolute inset-0 -z-[2] bg-cover bg-center"></div><span class="absolute left-[30px] top-6 font-display text-lg italic text-gold">N° 2</span>
+      <h3 class="font-display text-[clamp(32px,3vw,42px)] font-bold leading-[1.05]">Sensation écarlate</h3>
+      <ul class="mt-4 grid gap-[7px]"><li class="flex items-center gap-2.5 font-semibold text-gold before:h-1.5 before:w-1.5 before:flex-none before:rounded-full before:bg-gold before:content-['']">Sodabi</li><li class="flex items-center gap-2.5 before:h-1.5 before:w-1.5 before:flex-none before:rounded-full before:bg-gold before:content-['']">Sirop de vanille</li><li class="flex items-center gap-2.5 before:h-1.5 before:w-1.5 before:flex-none before:rounded-full before:bg-gold before:content-['']">Poivre de Selim</li><li class="flex items-center gap-2.5 before:h-1.5 before:w-1.5 before:flex-none before:rounded-full before:bg-gold before:content-['']">Jus de fruits rouges</li></ul>
+      <div class="mt-[22px] flex flex-wrap gap-2.5"><span class="whitespace-nowrap rounded-full border border-white/20 bg-black/25 px-3 py-1.5 text-[13px]">1 L avec alcool · 10 000 FCFA</span><span class="whitespace-nowrap rounded-full border border-white/20 bg-black/25 px-3 py-1.5 text-[13px]">1 L sans alcool · 8 000 FCFA</span></div>
+    </article>
+    <article class="ck c3 relative isolate flex min-h-[460px] flex-col justify-end overflow-hidden rounded-[26px] border border-white/10 p-[30px] lg:min-h-[520px]"><div class="bg absolute inset-0 -z-[2] bg-cover bg-center"></div><span class="absolute left-[30px] top-6 font-display text-lg italic text-gold">N° 3</span>
+      <h3 class="font-display text-[clamp(32px,3vw,42px)] font-bold leading-[1.05]">Le tropical</h3>
+      <ul class="mt-4 grid gap-[7px]"><li class="flex items-center gap-2.5 font-semibold text-gold before:h-1.5 before:w-1.5 before:flex-none before:rounded-full before:bg-gold before:content-['']">Sodabi</li><li class="flex items-center gap-2.5 before:h-1.5 before:w-1.5 before:flex-none before:rounded-full before:bg-gold before:content-['']">Jus d'ananas</li><li class="flex items-center gap-2.5 before:h-1.5 before:w-1.5 before:flex-none before:rounded-full before:bg-gold before:content-['']">Sirop de fruit de la passion aux épices</li><li class="flex items-center gap-2.5 before:h-1.5 before:w-1.5 before:flex-none before:rounded-full before:bg-gold before:content-['']">Jus de citron</li><li class="flex items-center gap-2.5 before:h-1.5 before:w-1.5 before:flex-none before:rounded-full before:bg-gold before:content-['']">Infusion à la citronnelle</li></ul>
+      <div class="mt-[22px] flex flex-wrap gap-2.5"><span class="whitespace-nowrap rounded-full border border-white/20 bg-black/25 px-3 py-1.5 text-[13px]">1 L avec alcool · 10 000 FCFA</span><span class="whitespace-nowrap rounded-full border border-white/20 bg-black/25 px-3 py-1.5 text-[13px]">1 L sans alcool · 8 000 FCFA</span></div>
+    </article>
+  </div></div></div>
+  <p class="mx-auto mt-[26px] max-w-[1240px] text-sm text-soft"><b class="font-semibold text-gold">Version sans alcool :</b> le sodabi est retiré, tout le reste est conservé.</p>
+</section>
+
+<!-- ===== Dégustation ===== -->
+<section id="rituel" class="relative overflow-hidden bg-bord px-[max(5vw,18px)] py-[clamp(64px,8vw,120px)]">
+  <div class="rit mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-[clamp(28px,5vw,72px)] lg:grid-cols-[1.1fr_1fr]">
+    <div class="pic relative mx-auto aspect-square w-full max-w-[420px] rounded-full bg-[radial-gradient(circle_at_50%_40%,#6d0f1f,#170407_72%)] lg:max-w-none">
+      <img class="b absolute left-1/2 top-[4%] h-[92%] w-auto max-w-none -translate-x-1/2 drop-shadow-[0_30px_40px_rgba(0,0,0,.6)]" src="assets/img/bottle.webp" alt="" loading="lazy">
+      <img class="absolute bottom-[12%] right-[2%] w-[30%]" src="assets/img/anise.webp" alt="" loading="lazy">
+      <img class="absolute bottom-[18%] left-[6%] w-[20%]" src="assets/img/rasp.webp" alt="" loading="lazy">
+    </div>
+    <div>
+      <div class="kicker">Dégustation</div>
+      <h2 class="font-display text-[clamp(36px,4.4vw,56px)] font-bold leading-[1.05]">Le bon geste, <span class="brush">au bon moment</span></h2>
+      <div class="mt-7 grid gap-3.5">
+        <div class="tip flex items-start gap-4 rounded-[18px] border border-line bg-black/20 p-[18px]"><svg class="h-11 w-11 flex-none rounded-full border border-gold p-2.5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h20M12 2v20M20 16l-4-4 4-4M4 8l4 4-4 4M16 4l-4 4-4-4M8 20l4-4 4 4"/></svg><div><b class="block text-[17px]">À consommer bien frais</b><span class="text-[15px] text-soft">Pure sur glaçons, ou en base de cocktail.</span></div></div>
+        <div class="tip flex items-start gap-4 rounded-[18px] border border-line bg-black/20 p-[18px]"><svg class="h-11 w-11 flex-none rounded-full border border-gold p-2.5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M6.3 17.7l-1.4 1.4M19.1 4.9l-1.4 1.4M3 21 21 3"/></svg><div><b class="block text-[17px]">Au sec, à l'abri de la lumière</b><span class="text-[15px] text-soft">La lumière ternit la couleur et les arômes.</span></div></div>
+        <div class="tip flex items-start gap-4 rounded-[18px] border border-line bg-black/20 p-[18px]"><svg class="h-11 w-11 flex-none rounded-full border border-gold p-2.5 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 22h8M12 15v7M5 3h14l-1.5 7.5a5.6 5.6 0 0 1-11 0Z"/></svg><div><b class="block text-[17px]">Avec modération</b><span class="text-[15px] text-soft">Une liqueur se savoure, elle ne se descend pas.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Commande ===== -->
+<section id="commander" class="bg-[radial-gradient(90%_80%_at_50%_0%,#5a0c1a,#170407_70%)] px-[max(5vw,18px)] py-[clamp(64px,8vw,120px)]">
+  <div class="head mx-auto mb-9 flex max-w-[1240px] flex-wrap items-end justify-between gap-6">
+    <h2 class="max-w-[14ch] font-display text-[clamp(38px,5vw,64px)] font-bold leading-[1.05]">Commander en <span class="brush">un message</span></h2>
+    <p class="m-0 max-w-[44ch] text-[17px] text-soft">Choisissez votre bouteille : la commande s'ouvre directement dans WhatsApp, déjà rédigée.</p>
+  </div>
+  <div class="mx-auto grid max-w-[1240px] grid-cols-1 gap-[18px] lg:grid-cols-3">
+    <div class="offer flex flex-col gap-2.5 rounded-[22px] border border-gold/45 bg-gradient-to-br from-liqueur/35 to-black/25 p-[26px]"><small class="text-sm text-gold">La signature</small><h3 class="font-display text-[26px] font-bold leading-tight">Liqueur fruits rouges – épices</h3><div class="whitespace-nowrap font-display text-[40px] font-bold leading-tight">500 ml</div><p class="m-0 flex-1 text-[15px] text-soft">Prix communiqué sur WhatsApp. Livraison et retrait à convenir.</p>
+      <a class="btn btn-gold mt-2 w-full" data-msg="Bonjour Ess'Sens, je souhaite commander la liqueur fruits rouges – épices (500 ml)." href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Commander la liqueur</a></div>
+    <div class="offer flex flex-col gap-2.5 rounded-[22px] border border-line bg-black/20 p-[26px]"><small class="text-sm text-gold">Cocktail · 1 L</small><h3 class="font-display text-[26px] font-bold leading-tight">Avec alcool</h3><div class="whitespace-nowrap font-display text-[40px] font-bold leading-tight">10 000 <em class="font-sans text-base not-italic text-soft">FCFA</em></div><p class="m-0 flex-1 text-[15px] text-soft">Limonade épicée, Sensation écarlate ou Le tropical, au sodabi.</p>
+      <a class="btn btn-ghost mt-2 w-full" data-msg="Bonjour Ess'Sens, je souhaite commander un cocktail 1 L avec alcool (10 000 FCFA). Parfum : " href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Choisir mon cocktail</a></div>
+    <div class="offer flex flex-col gap-2.5 rounded-[22px] border border-line bg-black/20 p-[26px]"><small class="text-sm text-gold">Cocktail · 1 L</small><h3 class="font-display text-[26px] font-bold leading-tight">Sans alcool</h3><div class="whitespace-nowrap font-display text-[40px] font-bold leading-tight">8 000 <em class="font-sans text-base not-italic text-soft">FCFA</em></div><p class="m-0 flex-1 text-[15px] text-soft">Les mêmes recettes, sans sodabi. Pour toute la tablée.</p>
+      <a class="btn btn-ghost mt-2 w-full" data-msg="Bonjour Ess'Sens, je souhaite commander un cocktail 1 L sans alcool (8 000 FCFA). Parfum : " href="#"><svg aria-hidden="true"><use href="#wa"/></svg>Choisir mon cocktail</a></div>
+  </div>
+  <div class="mx-auto mt-[34px] flex max-w-[1240px] flex-wrap gap-x-[34px] gap-y-3.5 text-[15px] text-soft"><span>Téléphone et WhatsApp : <b class="whitespace-nowrap font-semibold text-cream">+229 01 67 15 66 85</b></span><span>Instagram : <b class="whitespace-nowrap font-semibold text-cream">Essens by mc</b></span></div>
+</section>
+
+<footer class="border-t border-line bg-[#0e0204] px-[max(5vw,18px)] pb-[34px] pt-11">
+  <div class="mx-auto flex max-w-[1240px] flex-wrap items-center justify-between gap-6"><a class="flex items-center gap-2.5 no-underline" href="#top"><svg class="h-[50px] w-10" aria-hidden="true"><use href="#logo"/></svg><span class="font-logo text-[28px] leading-none tracking-wider text-cream">ESS'SENS</span></a><span class="brush text-[26px]">Liqueurs et cocktails artisanaux</span></div>
+  <div class="mx-auto mt-[26px] flex max-w-[1240px] flex-wrap justify-between gap-3 text-[13px] text-[#b9958c]"><span><strong class="font-semibold text-cream">L'abus d'alcool est dangereux pour la santé. À consommer avec modération.</strong> Vente interdite aux mineurs.</span><span>Maquette de démonstration · WEDE</span></div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/service.js"></script>
+</body>
+</html>

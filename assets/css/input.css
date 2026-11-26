@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Ce qui ne s'écrit pas proprement en classes utilitaires : composants répétés,
+   états pilotés par le JavaScript et effets de la scène immersive. */
+@layer base {
+  html { scroll-padding-top: 80px; }
+  [hidden] { display: none !important; }
+  body { overflow-x: clip; }
+  h1, h2, h3 { text-wrap: balance; }
+}
+
+@layer components {
+  .btn { @apply inline-flex min-h-[46px] items-center justify-center gap-2 whitespace-nowrap rounded-full px-5 text-[15px] font-semibold no-underline transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-gold; }
+  .btn svg { @apply h-[18px] w-[18px] flex-none; }
+  .btn-gold { @apply bg-gold text-[#2a0710] hover:brightness-105; }
+  .btn-ghost { @apply border border-line bg-white/5 text-cream hover:bg-white/10; }
+  .kicker { @apply mb-3 flex items-center gap-2.5 text-sm text-gold before:h-px before:w-7 before:bg-gold before:content-['']; }
+  .brush { @apply font-brush font-normal text-gold; }
+  .chip { @apply rounded-full border border-line bg-black/20 px-3.5 py-1.5 text-sm; }
+}
+
+/* ---------- scène 1 : la liqueur ---------- */
+.stage-bg { background: radial-gradient(120% 90% at 65% 45%, #6d0f1f, #3a0a12 45%, #170407 100%); }
+.tint { background: radial-gradient(80% 70% at 30% 60%, #7a3b12, transparent 70%); mix-blend-mode: screen; }
+.bokeh { background: url(../img/bokeh.webp) right / cover no-repeat; filter: saturate(1.2); }
+.bokeh.b2 { background-image: url(../img/bokeh2.webp); background-position: left; }
+.giant { -webkit-text-stroke: 1.5px rgba(233, 200, 124, .18); color: transparent; }
+.bottle { translate: -50% -50%; aspect-ratio: 450 / 1810; filter: drop-shadow(0 40px 50px rgba(0, 0, 0, .55)); }
+.glow { translate: -50% -50%; background: radial-gradient(circle, rgba(255, 80, 90, .35), transparent 65%); }
+.fl img { filter: drop-shadow(0 18px 22px rgba(0, 0, 0, .45)); }
+.fl.blur-layer img { filter: blur(3px) drop-shadow(0 18px 22px rgba(0, 0, 0, .45)); }
+.cluster { translate: -50% 0; }
+.cluster img { filter: drop-shadow(0 -10px 40px rgba(0, 0, 0, .5)); }
+.chap { translate: 0 -50%; opacity: 0; visibility: hidden; }
+.dots i { transition: .3s; }
+.dots i.on { background: #e9c87c; height: 22px; border-radius: 4px; }
+
+/* ---------- scène 2 : le service ---------- */
+.pc { translate: 0 -50%; opacity: 0; visibility: hidden; transition: opacity .45s, visibility .45s; }
+.pc.on { opacity: 1; visibility: visible; }
+
+/* ---------- cocktails : défilement horizontal (activé par le JS au-dessus de 1000 px) ---------- */
+.ck::before { content: ""; position: absolute; inset: 0; z-index: -1; }
+.ck .bg { transform: scale(1.15); }
+.ck.c1 .bg { background-image: url(../img/t_citronnelle.webp); }
+.ck.c1::before { background: linear-gradient(180deg, rgba(10, 40, 28, .25), rgba(8, 36, 26, .94) 62%); }
+.ck.c2 .bg { background-image: url(../img/t_fruits.webp); }
+.ck.c2::before { background: linear-gradient(180deg, rgba(80, 6, 20, .2), rgba(58, 8, 18, .95) 62%); }
+.ck.c3 .bg { background-image: url(../img/t_tropical.webp); }
+.ck.c3::before { background: linear-gradient(180deg, rgba(120, 60, 10, .2), rgba(70, 32, 6, .95) 62%); }
+@media (min-width: 1001px) {
+  .hwrap.on { height: 300vh; margin-inline: calc(-1 * max(5vw, 18px)); }
+  .hwrap.on .sticky-x { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; }
+  .hwrap.on .track { display: flex; max-width: none; margin: 0; padding-inline: max(5vw, 18px); width: max-content; }
+  .hwrap.on .ck { width: min(560px, 40vw); min-height: min(600px, 66vh); }
+}
+.marquee span::after { content: "✦"; margin-left: 48px; color: #c0182f; font-style: normal; font-size: .6em; vertical-align: middle; }
+
+@media (max-width: 700px) {
+  .bottle { height: 58vh !important; top: 38% !important; }
+  .glow { top: 40% !important; }
+  .chap { left: 18px !important; right: 18px !important; top: auto !important; bottom: 30px; translate: 0 0; width: auto !important; z-index: 2; }
+  .pc { left: 18px !important; right: 18px !important; top: auto !important; bottom: 28px; translate: 0 0; width: auto !important; z-index: 2; }
+  .cluster { left: 50% !important; width: 150vw !important; bottom: auto !important; top: 48vh; }
+  .fade-bottom::after { content: ""; position: absolute; inset: auto 0 0; height: 50%; background: linear-gradient(transparent, rgba(23, 4, 7, .95) 50%); pointer-events: none; }
+}
+@media (prefers-reduced-motion: reduce) { .animate-marquee, .animate-cue { animation: none; } }
+.giant { translate: -50% -50%; }
+#nav.solid { background: rgba(23, 4, 7, .82); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(233, 200, 124, .22); }
