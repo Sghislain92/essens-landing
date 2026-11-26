@@ -1,0 +1,9 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "echo \"Site statique : aucune dépendance à installer\"",
+  "buildCommand": "echo \"CSS Tailwind déjà compilé dans assets/css/style.css\"",
+  "cleanUrls": true,
+  "headers": [
+    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] }
+  ]
+}
