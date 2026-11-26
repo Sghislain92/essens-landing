@@ -1,9 +1,18 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "echo \"Site statique : aucune dépendance à installer\"",
-  "buildCommand": "echo \"CSS Tailwind déjà compilé dans assets/css/style.css\"",
+  "buildCommand": "rm -rf public && mkdir -p public && cp -r index.html assets public/ && rm -f public/assets/css/input.css",
+  "outputDirectory": "public",
   "cleanUrls": true,
   "headers": [
-    { "source": "/assets/img/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }] }
+    {
+      "source": "/assets/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    }
   ]
 }
